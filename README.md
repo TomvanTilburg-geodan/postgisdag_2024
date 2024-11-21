@@ -10,3 +10,43 @@ Repo voor workshop werken met postgis, h3 en parquet
 ## Optioneel
 - pgvector
 - pg_parquet 
+
+
+Data inladen:
+Basisreg: Joep
+  Vaarwegen
+  NWB
+  BAG
+  BGT/BRT
+
+Raster Tom -> Geert, Ronnie
+  Landuse
+  AHN
+
+Punten: Bert, Kamiel, Gerard, Niene, Rony
+  Foursquare
+  AIS
+  Flightradar
+  Strava
+
+Vierkanten: Thijs , Kas
+  CBS
+  SOVON
+  Waarnemingen
+
+
+Vaarwegen
+AHN
+
+GPX logs (strava)
+Foursquare
+Natuurwaarden (sovon/waarnemingen/
+Flightradar data
+AIS
+Natuurnetwerk NL
+BAG
+Laduse
+WGegen (NWB)
+BGT/BRT
+CBS 100m
+
