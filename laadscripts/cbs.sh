@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
-export PGUSER=postgres
+export PGUSER=guest
 export PGHOST=localhost
 export PGPORT=5432
 export PGDATABASE=hexagons
-export PGPASSWORD=postgres
+export PGPASSWORD=guest
 
-psql -d hexagons -c "CREATE SCHEMA cbs;"
+psql -d hexagons -c "CREATE SCHEMA IF NOT EXISTS cbs;"
 
-wget https://geodata.cbs.nl/files/Wijkenbuurtkaart/WijkBuurtkaart_2024_v1.zip
+#wget https://geodata.cbs.nl/files/Wijkenbuurtkaart/WijkBuurtkaart_2024_v1.zip
 ogrinfo -so /vsizip/WijkBuurtkaart_2024_v1.zip
 ogr2ogr \
-  -f "PostgreSQL" PG:"dbname=hexagons" \
+  -f "PostgreSQL" PG:"" \
   -lco SCHEMA=cbs \
   /vsizip/WijkBuurtkaart_2024_v1.zip
 
